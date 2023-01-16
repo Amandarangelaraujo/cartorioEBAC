@@ -110,50 +110,61 @@ int main(){
 		
 	int opcao=0;
 	int x=1;
+	char senhaDigitada[10]="a";
+	int retorno;
 	
-	for(x=1; x=1;) {      // para ficar em um looping infinito
+	printf("login do administrador! \n\nDigite a sua senha: ");
+	scanf("%s", &senhaDigitada);
 	
-	setlocale (LC_ALL, "portuguese");
-	
-	system ("cls");
-	printf("Olá usuário da EBAC \n\n");  //apresenta��o
-	printf ("Escolha a opção desejada \n"); //mostrar um menu de op��es
-	printf("\t1- Registrar nomes.\n");     //op��es que ser�o apresnetadas no menu
-	printf("\t2- Consultar nomes.\n");
-	printf("\t3- Apagar nomes. \n");
-	printf("\t4 - Sair do menu de opções. \n");
-	printf("escolha uma opção: "); //fim do menu
-	scanf("%d", &opcao);
-	
-	system("cls"); //para limpar a p�gina
-	
-	switch (opcao){
-		case 1:       //nao esquecer de colocar dois pontos ao inves de ponto e v�rgula
-		registro();
-		break;  //aqui entra o ponto e v�rgula
-		
-		case 2:
-		consulta();
-		break;
+	retorno =  strcmp (senhaDigitada, "admin");
 
-		case 3:
-		deletar();
-		break;
+	if (retorno == 0)
+	{
 
-		case 4:
-		printf("Obrigada por utilizar o sistema! \n");
-		system("pause");
-		return 0;   /*esse return 0; pode ser utilizado como quebrador de lacos de repeticao, saindo dos sitema*/
-		break;
-		
-		default: //esse � como se fosse o else
-		printf("você escolheu uma opção inválida! Pressione enter para voltar ao menu.\n"); 
-		break;
-		
-	printf("\n\n\n### Esse software pertence � Amanda Rangel ###");    //autoria do programa
-			
-	}
+		for(x=1; x=1;) {      // para ficar em um looping infinito
 	
-   }
+		setlocale (LC_ALL, "portuguese");
+	
+		system ("cls");
+		printf("Olá usuário da EBAC \n\n");  //apresenta��o
+		printf ("Escolha a opção desejada \n"); //mostrar um menu de op��es
+		printf("\t1- Registrar nomes.\n");     //op��es que ser�o apresnetadas no menu
+		printf("\t2- Consultar nomes.\n");
+		printf("\t3- Apagar nomes. \n");
+		printf("\t4 - Sair do menu de opções. \n");
+		printf("escolha uma opção: "); //fim do menu
+		scanf("%d", &opcao);
+	
+		system("cls"); //para limpar a p�gina
+	
+		switch (opcao){
+			case 1:       //nao esquecer de colocar dois pontos ao inves de ponto e v�rgula
+			registro();
+			break;  //aqui entra o ponto e v�rgula
+		
+			case 2:
+			consulta();
+			break;
 
+			case 3:
+			deletar();
+			break;
+
+			case 4:
+			printf("Obrigada por utilizar o sistema! \n");
+			system("pause");
+			return 0;   /*esse return 0; pode ser utilizado como quebrador de lacos de repeticao, saindo dos sitema*/
+			break;
+		
+			default: //esse � como se fosse o else
+			printf("você escolheu uma opção inválida! Pressione enter para voltar ao menu.\n"); 
+			break;
+		
+			printf("\n\n\n### Esse software pertence � Amanda Rangel ###");    //autoria do programa
+		 }
+	 	}	
+  	}
+	else
+	printf("senha incorreta");
 }
+
